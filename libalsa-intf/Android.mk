@@ -58,6 +58,13 @@ LOCAL_MODULE_TAGS:= debug
 include $(BUILD_EXECUTABLE)
 
 include $(CLEAR_VARS)
+LOCAL_SRC_FILES:= amix_export.c
+LOCAL_MODULE:= libamixexport
+LOCAL_SHARED_LIBRARIES := libc libcutils libalsa-intf
+LOCAL_MODULE_TAGS:= debug
+include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
 LOCAL_SRC_FILES:= alsaucm_test.c
 LOCAL_MODULE:= alsaucm_test
 LOCAL_SHARED_LIBRARIES:= libc libcutils libalsa-intf
